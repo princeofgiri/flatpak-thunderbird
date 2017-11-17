@@ -13,28 +13,18 @@ Requirements:
 Instructions:
 -------------
 
-(1) Install the flatpak repository for GNOME nightly:
-```
-  wget http://sdk.gnome.org/nightly/keys/nightly.gpg
-  flatpak --user remote-add --gpg-import=nightly.gpg gnome-nightly http://sdk.gnome.org/nightly/repo
-```
-(2) Install the required runtimes
-```
-  flatpak --user install gnome-nightly org.gnome.Platform
-  flatpak --user install gnome-nightly org.gnome.Sdk
-```
-(3) Build thunderbird from this directory:
+(1) Build thunderbird from this directory:
 ```
   flatpak-builder --force-clean --ccache --require-changes \
       --repo=repo app \
       org.mozilla.Thunderbird.json
 ```
-(4) Add a remote to your local repo and install it:
+(2) Add a remote to your local repo and install it:
 ```
   flatpak --user remote-add --no-gpg-verify thunderbird-repo /path/to/your/flatpak/repo
   flatpak --user install thunderbird-repo org.mozilla.Thunderbird
 ```
-(5) Run thunderbird as an flatpak:
+(3) Run thunderbird as an flatpak:
 ```
   flatpak run org.mozilla.Thunderbird
 ```
@@ -49,12 +39,3 @@ Last, you can bundle chromium to a file with the `build-bundle` subcommand:
 ```
   flatpak build-bundle /path/to/your/flatpak/repo thunderbird.bundle org.mozilla.Thunderbird
 ```
-
-Prebuilt flatpaks
------------------
-
-By popular request, I've built myself two flatpaks of Thunderbird against the org.gnome.Platform runtime: one for x86_64/master and another for x86_64/3.20.
-
-Grab them from here:
-  * [Mozilla Thunderbird for org.gnome.Platform/x86_64/master](https://raw.githubusercontent.com/mariospr/thunderbird-flatpak/master/bundles/x86_64/master/org.mozilla.Thunderbird.flatpak)
-  * [Mozilla Thunderbird for org.gnome.Platform/x86_64/3.20](https://raw.githubusercontent.com/mariospr/thunderbird-flatpak/master/bundles/x86_64/3.20/org.mozilla.Thunderbird.flatpak)
