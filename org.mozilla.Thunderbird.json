@@ -15,7 +15,7 @@
     "--talk-name=org.gnome.GConf",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets",
-    "--extra-data=thunderbird.tar.bz2:e16773ac0600f2255210c18565bd543b942a447cccc47985a91c9515c9304e93:49213107::http://ftp.mozilla.org/pub/thunderbird/releases/56.0b2/linux-x86_64/en-US/thunderbird-56.0b2.tar.bz2"
+    "--extra-data=thunderbird.tar.bz2:0f2ba37a577012d0acce76f915cf003fc5f987e4ee1a857606eb1a1c022b334b:49797823::http://ftp.mozilla.org/pub/thunderbird/releases/52.4.0/linux-x86_64/en-US/thunderbird-52.4.0.tar.bz2"
   ],
   "modules": [
     {
