@@ -1,0 +1,4 @@
+[Application]
+name=org.mozilla.Thunderbird
+runtime=org.gnome.Platform/x86_64/3.24
+command=thunderbird.sh
